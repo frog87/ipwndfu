@@ -9,7 +9,8 @@ AES_UID_KEY = 0x20000201
 AES_ENCRYPT = 16
 AES_DECRYPT = 17
 
-class PwnedDeviceConfig:
+class
+:
     def __init__(self, version, cpid, aes_crypto_cmd, memmove, get_block_device, load_address, rom_address, rom_size, rom_sha256):
         self.version = version
         self.cpid = cpid
@@ -137,8 +138,15 @@ class PwnedDFUDevice():
 
         time.sleep(0.5)
 
+
+
+
+
+
+
         device = dfu.acquire_device()
-        assert self.identifier == device.serial_number
+        assert sel
+    f.identifier == device.serial_number
 
         requiredLength = 0x8 + receiveLength
         requiredLength = requiredLength if requiredLength % 0x800 == 0 else requiredLength / 0x800 * 0x800 + 0x800
